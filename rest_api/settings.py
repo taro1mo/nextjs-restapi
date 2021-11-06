@@ -100,16 +100,16 @@ WSGI_APPLICATION = 'rest_api.wsgi.application'
 
 default_dburl = 'sqlite:///' ; str(BASE_DIR / "db.sqlite3")
 
-DATABASES ={
+DATABASES = {
   'dafault': config('DATABASE_URL', default=default_dburl, cast=dburl)
 }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
