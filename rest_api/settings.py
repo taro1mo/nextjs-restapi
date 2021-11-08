@@ -60,18 +60,17 @@ CORS_ORIGIN_WHITELIST = [
 ]
 
 SIMPLE_JWT = {
-  'AUTH_HEADER_TYPES': ('JWT',),
-  'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'AUTH_HEADER_TYPES': ('JWT',),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
 }
 
 REST_FRAMEWORK = {
-  'DEFAULT_PERMISSION_CLASSES': [
-    'rest_framework.permissions.IsAuthenticated',
-  ],
-  'DEFAULT_AUTHENTICATION_CLASSES': [
-      'rest_framework_simplejwt.authentication.JWTAuthentication',
-  ]
-    
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.IsAuthenticated',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
 }
 
 ROOT_URLCONF = 'rest_api.urls'

@@ -5,8 +5,8 @@ from .serializers import TaskSerializer, PostSerializer, UserSerializer
 from .models import Task, Post
 
 class CreateUserView(generics.CreateAPIView):
-  serializer_class = UserSerializer
-  permission_classes = (AllowAny,)
+    serializer_class = UserSerializer
+    permission_classes = (AllowAny,)
 
 class PostListView(generics.ListAPIView):
   queryset = Post.objects.all()
